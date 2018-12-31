@@ -1,0 +1,123 @@
+@font-face {
+  font-family: iransans; /*a name to be used later*/
+  src: url('../fonts/IranSans/IRANSans-web.woff') format('woff'),
+       url('../fonts/IranSans/IRANSans-web.woff2') format('woff2'),
+       url('../fonts/IranSans/IRANSans-web.ttf') format('truetype');
+
+}
+
+body {
+	line-height: 2.028571429;
+	direction: rtl !important;
+	margin: 0;
+	background-image: url('hbi3.jpg');
+    	background-repeat: no-repeat;
+    	background-size: cover;
+    	height: 100vh;
+	font-family: iransans;
+}
+
+.outer {
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner p {
+  margin-bottom: 30px;
+  font-size: 21px;
+  font-weight: 200;
+  color: #FFFFFF;
+	font-family: 'iransans';
+}
+
+.inner {
+    background: none;
+    text-align: center;
+}
+
+strong {
+
+  font-weight: bold;
+  font-size: -webkit-xxx-large;
+  color: white;
+	font-family: 'iransans';
+}
+
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: transparent; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+	font-family: 'iransans';
+}
+
+#snackbar.show {
+    visibility: visible;
+
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 5s;
+    animation: fadein 0.5s, fadeout 0.5s 5040s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.btn {
+display: inline-block;
+    font-weight: 100px;
+    text-align: center;
+    cursor: pointer;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: solid white 1px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.428571429;
+    font-family: 'iransans';
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    transition: all .3s ease-out;
+}
+
+.btn:hover {
+  color: gray;
+  background-color: white;
+  text-decoration: none;
+}
